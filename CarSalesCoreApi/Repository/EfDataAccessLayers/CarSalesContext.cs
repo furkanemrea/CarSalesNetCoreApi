@@ -13,11 +13,14 @@ namespace CarSalesCoreApi.Repository
         {
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-PQF4L5Q\SQLEXPRESS;Initial Catalog=CarSalesDB;Integrated Security=True");
         }
+        public DbSet<Category> Category { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Adress> Adress { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<District> District { get; set; }
         public DbSet<Model> Model { get; set; }
+        public DbSet<Adress> Adresses { get; set; }
         public DbSet<CarBrand> CarBrand { get; set; }
+        public DbSet<Car> Car { get; set; }
     }
 }

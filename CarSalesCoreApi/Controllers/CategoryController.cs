@@ -43,6 +43,7 @@ namespace CarSalesCoreApi.Controllers
             _categoryService.UpdateCategory(category);
             return Ok(category);
         }
+
         [HttpPost]
         public IActionResult Post(Category category)
         {

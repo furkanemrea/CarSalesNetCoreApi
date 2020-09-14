@@ -28,12 +28,18 @@ namespace CarSalesCoreApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<CarBrandService>();
+            services.AddScoped<ICarBrandDal, EfCarBrandDal>();
+            services.AddScoped<AdressService>();
+            services.AddScoped<IAdressDal, EfAdressDal>();
             services.AddScoped<ModelService>();
             services.AddScoped<IModelDal, EfModelDal>();
             services.AddScoped<CategoryService>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
             services.AddScoped<CityService>();
             services.AddScoped<ICityDal, EfCityDal>();
+            services.AddScoped<CarService>();
+            services.AddScoped<ICarDal, EfCarDal>();
             services.AddScoped<UserService>();
             services.AddScoped<IUserDal, EfUserDal>();
             services.AddMvc(options =>

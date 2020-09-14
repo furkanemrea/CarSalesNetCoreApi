@@ -31,31 +31,25 @@ namespace CarSalesCoreApi.Repository
 
         public void Add(TEntity entity)
         {
-            using (var context = new TContext())
-            {
-                var addedEntity = context.Entry(entity);
-                addedEntity.State = EntityState.Added;
-                context.SaveChanges();
-            }
+            Process(entity, EntityState.Added);
         }
         public void Update(TEntity entity)
         {
-            using (var context = new TContext())
-            {
-                var updatedEntity = context.Entry(entity);
-                updatedEntity.State = EntityState.Modified;
-                context.SaveChanges();
-            }
+            Process(entity,EntityState.Modified);
         }
-
         public void Delete(TEntity entity)
+        {
+            Process(entity, EntityState.Deleted);
+        }
+        private void Process(TEntity entity,EntityState entityState)
         {
             using (var context = new TContext())
             {
-                var deletedEntity = context.Entry(entity);
-                deletedEntity.State = EntityState.Deleted;
+                var processedEntity = context.Entry(entity);
+                processedEntity.State = entityState;
                 context.SaveChanges();
             }
         }
+        
     }
 }
