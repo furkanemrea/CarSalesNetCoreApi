@@ -27,7 +27,7 @@ namespace CarSalesCoreApi.Controllers
                 var userList = _userService.getUserList();
                 return Ok(userList);
             }
-            catch 
+            catch
             {
                 return BadRequest();
             }
@@ -42,7 +42,7 @@ namespace CarSalesCoreApi.Controllers
                 var user = _userService.getUserById(id);
                 return Ok(user);
             }
-            catch 
+            catch
             {
 
                 return BadRequest();
@@ -65,7 +65,7 @@ namespace CarSalesCoreApi.Controllers
             return Ok(user);
         }
 
-        
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -74,26 +74,26 @@ namespace CarSalesCoreApi.Controllers
                 _userService.deleteUser(id);
                 return Ok(id);
             }
-            catch 
+            catch
             {
 
                 return Ok($"Id={id} is not found ");
             }
-           
+
         }
 
         [HttpGet("UserDetails")]
         public IActionResult GetDetails()
         {
-            //try
-            //{
-                var result =_userService.getUserDetails();
+            try
+            {
+                var result = _userService.getUserDetails();
                 return Ok(result);
-            //}
-            //catch
-            //{
-            //    return BadRequest();
-            //}
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
     }
 }

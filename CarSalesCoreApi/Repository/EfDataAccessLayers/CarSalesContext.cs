@@ -17,6 +17,7 @@ namespace CarSalesCoreApi.Repository
         public DbSet<Adress> Adress { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<District> District { get; set; }
-      
+        public DbSet<Model> Model { get; set; }
+        public DbSet<CarBrand> CarBrand { get; set; }
     }
 }

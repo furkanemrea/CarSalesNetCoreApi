@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace CarSalesCoreApi.Entities
 {
-    public class Adress:IEntity
+    public class Model:IEntity
     {
         public int Id { get; set; }
-        public int DistinctId { get; set; }
-        public int CityId { get; set; }
-        public string AdressName { get; set; }
-        
+        public int Brand { get; set; }
+        public string ModelName { get; set; }
+
     }
 }

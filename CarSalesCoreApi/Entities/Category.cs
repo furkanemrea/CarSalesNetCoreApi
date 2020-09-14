@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace CarSalesCoreApi.Entities
 {
-    public interface IEntity
+    public class Category:IEntity
     {
-         
+        public int Id { get; set; }
+        public int Name { get; set; }
     }
 }
