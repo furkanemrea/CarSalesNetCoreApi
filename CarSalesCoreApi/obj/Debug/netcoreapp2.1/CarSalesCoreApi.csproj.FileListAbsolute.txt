@@ -1,0 +1,16 @@
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\bin\Debug\netcoreapp2.1\CarSalesCoreApi.deps.json
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\bin\Debug\netcoreapp2.1\CarSalesCoreApi.runtimeconfig.json
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\bin\Debug\netcoreapp2.1\CarSalesCoreApi.runtimeconfig.dev.json
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\bin\Debug\netcoreapp2.1\CarSalesCoreApi.dll
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\bin\Debug\netcoreapp2.1\CarSalesCoreApi.pdb
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\obj\Debug\netcoreapp2.1\CarSalesCoreApi.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\obj\Debug\netcoreapp2.1\CarSalesCoreApi.RazorAssemblyInfo.cache
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\obj\Debug\netcoreapp2.1\CarSalesCoreApi.RazorAssemblyInfo.cs
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\obj\Debug\netcoreapp2.1\CarSalesCoreApi.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\obj\Debug\netcoreapp2.1\CarSalesCoreApi.AssemblyInfo.cs
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\obj\Debug\netcoreapp2.1\CarSalesCoreApi.RazorTargetAssemblyInfo.cache
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\obj\Debug\netcoreapp2.1\CarSalesCoreApi.dll
+C:\Users\DELL\source\repos\CarSalesCoreApi\CarSalesCoreApi\obj\Debug\netcoreapp2.1\CarSalesCoreApi.pdb
