@@ -28,7 +28,6 @@ namespace CarSalesCoreApi.Repository
                 : context.Set<TEntity>().Where(filter).ToList();
             }
         }
-
         public void Add(TEntity entity)
         {
             Process(entity, EntityState.Added);
@@ -50,6 +49,5 @@ namespace CarSalesCoreApi.Repository
                 context.SaveChanges();
             }
         }
-        
     }
 }

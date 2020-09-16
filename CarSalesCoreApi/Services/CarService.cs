@@ -5,7 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Net.Http;
+
+
 
 namespace CarSalesCoreApi.Services
 {
@@ -25,10 +27,14 @@ namespace CarSalesCoreApi.Services
 
         public Car GetCarById(int Id)
         {
-            var car = _carDal.Get(x => x.Id == Id);
+            var car = _carDal.FindById(Id);
+            if (car == null)
+            {
+               
+            }
+
             return car;
         }
-
         public Car AddCar(Car car)
         {
             _carDal.Add(car);
@@ -39,21 +45,18 @@ namespace CarSalesCoreApi.Services
             _carDal.Update(car);
             return car;
         }
-        public List<CarModel> GetCarModelWithDetails(Car.Statuses statuses)
+        public List<CarModel> GetCarModelWithDetails(string status)
         {
-            var list = _carDal.GetCarModelWithDetails(statuses);
+            var list = _carDal.GetCarModelWithDetails(status);
             return list;
         }
-        public int UpdateStatusPassive(int Id)
+        public Car UpdateStatusPassive(int Id)
         {
-            using (var context = new CarSalesContext())
-            {
-                var updatedEntity = context.Car.Find(Id);
-                updatedEntity.Status = Car.Statuses.PASSIVE;
-                updatedEntity.EndDate = DateTime.Now;
-                context.SaveChanges();
-            }
-            return Id;
+            var car=GetCarById(Id);
+            car.Status = "PASSIVE";
+            car.EndDate = DateTime.Now;
+            _carDal.Update(car);
+            return car;
         }
     }
 }

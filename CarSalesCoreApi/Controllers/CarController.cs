@@ -27,6 +27,7 @@ namespace CarSalesCoreApi.Controllers
         [HttpGet("{Id}")]
         public IActionResult Get(int Id)
         {
+            
             var car = _carService.GetCarById(Id);
             return Ok(car);
         }
@@ -45,12 +46,12 @@ namespace CarSalesCoreApi.Controllers
             return Ok(car);
         }
         [HttpGet("Details/{status}")]
-        public IActionResult GetCarModelWithDetails(Car.Statuses status)
+        public IActionResult GetCarModelWithDetails(string status)
         {
             var list = _carService.GetCarModelWithDetails(status);
             return Ok(list);
         }
-        [HttpPatch("{Id}")]
+        [HttpGet("UpdateStatusPassive/{Id}")]
         public IActionResult UpdateStatusPassive(int Id)
         {
             _carService.UpdateStatusPassive(Id);

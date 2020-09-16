@@ -22,5 +22,6 @@ namespace CarSalesCoreApi.Repository
         public DbSet<Adress> Adresses { get; set; }
         public DbSet<CarBrand> CarBrand { get; set; }
         public DbSet<Car> Car { get; set; }
+        public DbSet<Favorite> Favorite { get; set; }
     }
 }

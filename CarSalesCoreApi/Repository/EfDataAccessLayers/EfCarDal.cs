@@ -9,7 +9,7 @@ namespace CarSalesCoreApi.Repository.EfDataAccessLayers
 {
     public class EfCarDal : EfEntityRepositoryBase<Car, CarSalesContext>, ICarDal
     {
-        public List<CarModel> GetCarModelWithDetails(Car.Statuses cs)
+        public List<CarModel> GetCarModelWithDetails(string cs)
         {
             using (CarSalesContext context = new CarSalesContext())
             {
@@ -22,7 +22,7 @@ namespace CarSalesCoreApi.Repository.EfDataAccessLayers
                               c.ModelId equals mdl.Id
                               join user in context.Users
                               on c.CreatedBy equals user.Id
-                              where c.Status==cs
+                              where c.Status == cs
                               select new CarModel
                               {
                                   Id = c.Id,
@@ -38,5 +38,19 @@ namespace CarSalesCoreApi.Repository.EfDataAccessLayers
 
             }
         }
+        public Car FindById(int Id)
+        {
+            using (var context = new CarSalesContext())
+            {
+                var result = context.Car.Find(Id);
+
+
+                return result;
+            }
+        }
+
+
     }
+
+    
 }

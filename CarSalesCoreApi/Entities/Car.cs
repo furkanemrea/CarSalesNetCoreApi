@@ -18,10 +18,10 @@ namespace CarSalesCoreApi.Entities
         public int CreatedBy { get; set; }
         public int? UpdatedBy { get; set; }
         public DateTime? EndDate { get; set; }
-        public Statuses Status { get; set; }
+        public string Status { get; set; }
         public int? CharacteristicId { get; set; }
 
 
-        public enum Statuses { ACTIVE,PASSIVE,ON_HOLD };
+        
     }
 }
